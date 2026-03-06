@@ -1,0 +1,105 @@
+# Environment variables - NEVER commit
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.py[cod]
+__pycache__/
+*.so
+.Python
+env/
+venv/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+postgres_data/
+redis_data/
+
+# Uploads
+uploads/
+videos/
+images/
+thumbnails/
+
+# Logs
+*.log
+logs/
+*.pot
+
+# Security files
+*.pem
+*.key
+*.crt
+ssl/
+
+# Node modules (frontend)
+node_modules/
+npm-debug.log
+yarn-error.log
+.next/
+out/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Sensitive files
+.env
+.env.production
+.env.local
+secrets.json
+private_key.pem
+certificate.pem
+
+# Package manager lockfiles (optional)
+# poetry.lock
+# Pipfile.lock
+
+# IDE config
+.vscode/settings.json
+.idea/*
+
+# Build outputs
+build/
+dist/
+*.egg-info/
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+# Docker
+.dockerignore
+docker-compose.override.yml

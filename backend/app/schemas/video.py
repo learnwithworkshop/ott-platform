@@ -1,6 +1,7 @@
 from typing import Optional
+from datetime import datetime
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Field, ConfigDict
 
 
 class VideoBase(BaseModel):
@@ -9,12 +10,13 @@ class VideoBase(BaseModel):
     file_path: Optional[str] = None
     thumbnail_path: Optional[str] = None
     duration: Optional[int] = None
+    is_published: Optional[bool] = False
 
 
 class VideoCreate(VideoBase):
-    title: str
-    description: str
-    file_path: str
+    title: str = Field(..., min_length=1, max_length=255)
+    description: str = Field(..., min_length=1)
+    file_path: str = Field(..., min_length=1)
 
 
 class VideoUpdate(VideoBase):
@@ -22,10 +24,12 @@ class VideoUpdate(VideoBase):
 
 
 class Video(VideoBase):
-    id: int
+    id: int = Field(..., description="Video ID")
     title: str
     description: str
-    owner_id: int
+    owner_id: int = Field(..., description="Owner user ID")
+    view_count: int = Field(default=0)
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)

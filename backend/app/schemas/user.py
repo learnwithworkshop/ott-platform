@@ -1,6 +1,7 @@
 from typing import Optional
+from datetime import datetime
 
-from pydantic import BaseModel, EmailStr
+from pydantic import BaseModel, EmailStr, Field, ConfigDict
 
 
 class UserBase(BaseModel):
@@ -11,18 +12,19 @@ class UserBase(BaseModel):
 
 
 class UserCreate(UserBase):
-    email: EmailStr
-    password: str
-    full_name: str
+    email: EmailStr = Field(..., description="User email address")
+    password: str = Field(..., min_length=12, description="User password")
+    full_name: Optional[str] = Field(None, description="Full name of user")
 
 
 class UserUpdate(UserBase):
-    password: Optional[str] = None
+    password: Optional[str] = Field(None, min_length=12)
 
 
 class User(UserBase):
-    id: int
+    id: int = Field(..., description="User ID")
     email: EmailStr
+    created_at: Optional[datetime] = None
+    updated_at: Optional[datetime] = None
 
-    class Config:
-        orm_mode = True
+    model_config = ConfigDict(from_attributes=True)
