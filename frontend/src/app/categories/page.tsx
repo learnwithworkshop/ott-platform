@@ -51,45 +51,45 @@ export default function CategoriesPage() {
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
             🎭 Santhal Cultural Categories
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-                Cultural Heritage
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                🎵 Folk Songs
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Explore the rich cultural traditions of Santhal communities. From
-                traditional folk songs to classical dance performances, discover
-                the artistic expressions that define Santhal identity.
+                Traditional Santhal folk songs and music that preserve the rich musical heritage of the community. These songs tell stories of love, nature, and cultural traditions.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-                Educational Content
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                💃 Dance
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Learn about Santhal history, traditions, language, and customs.
-                Our educational videos provide insights into the Santhal way of
-                life and their significant contributions to society.
+                Traditional Santhal dance performances and tutorials showcasing the vibrant dance forms that are an integral part of Santhal celebrations and ceremonies.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-                Contemporary News
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                📖 Stories
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Stay updated with the latest news, events, and developments from
-                Santhal communities. Coverage includes cultural events, social
-                initiatives, and important announcements.
+                Folk tales, legends, and cultural stories passed down through generations. These narratives preserve Santhal history, mythology, and moral teachings.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3">
-                Creative Expression
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                🎓 Education
               </h3>
               <p className="text-gray-700 dark:text-gray-300">
-                Enjoy contemporary creative works by Santhal artists including
-                music, visual arts, crafts, and storytelling that blend tradition
-                with modern innovation.
+                Educational content about Santhal culture, history, language, and traditions. Learn about the Santhal way of life and their significant contributions to society.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-3 flex items-center gap-2">
+                📰 News
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300">
+                Latest news and updates from Santhal communities. Coverage includes cultural events, social initiatives, and important announcements affecting the community.
               </p>
             </div>
           </div>

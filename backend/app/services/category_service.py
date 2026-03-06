@@ -162,42 +162,6 @@ class CategoryService:
                 'order': 5,
                 'language': 'en'
             },
-            {
-                'name': 'Arts & Crafts',
-                'slug': 'arts',
-                'description': 'Traditional crafts, art forms, and creative works',
-                'icon': '🎨',
-                'color': 'from-indigo-500 to-purple-500',
-                'order': 6,
-                'language': 'en'
-            },
-            {
-                'name': 'Festivals',
-                'slug': 'festivals',
-                'description': 'Cultural festivals and celebrations',
-                'icon': '🎉',
-                'color': 'from-yellow-500 to-orange-500',
-                'order': 7,
-                'language': 'en'
-            },
-            {
-                'name': 'Cuisine',
-                'slug': 'cuisine',
-                'description': 'Traditional Santhal food recipes and cooking',
-                'icon': '🍲',
-                'color': 'from-red-500 to-pink-500',
-                'order': 8,
-                'language': 'en'
-            },
-            {
-                'name': 'Traditional Wisdom',
-                'slug': 'wisdom',
-                'description': 'Proverbs, teachings, and traditional knowledge',
-                'icon': '💡',
-                'color': 'from-cyan-500 to-blue-500',
-                'order': 9,
-                'language': 'en'
-            },
         ]
 
     @staticmethod

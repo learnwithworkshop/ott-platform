@@ -48,34 +48,6 @@ const SANTHAL_CATEGORIES: Category[] = [
     icon: '📰',
     color: 'from-orange-500 to-amber-500',
   },
-  {
-    id: 'arts',
-    nameKey: 'arts',
-    descKey: 'artsDesc',
-    icon: '🎨',
-    color: 'from-indigo-500 to-purple-500',
-  },
-  {
-    id: 'festivals',
-    nameKey: 'festivals',
-    descKey: 'festivalsDesc',
-    icon: '🎉',
-    color: 'from-yellow-500 to-orange-500',
-  },
-  {
-    id: 'cuisine',
-    nameKey: 'cuisine',
-    descKey: 'cuisineDesc',
-    icon: '🍲',
-    color: 'from-red-500 to-pink-500',
-  },
-  {
-    id: 'wisdom',
-    nameKey: 'wisdom',
-    descKey: 'wisdomDesc',
-    icon: '💡',
-    color: 'from-cyan-500 to-blue-500',
-  },
 ];
 
 interface CategoryViewProps {
