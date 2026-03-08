@@ -1,8 +1,7 @@
 from sqlalchemy.orm import Session
-
 from app.core.security import get_password_hash, verify_password
 from app.models.user import User
-from app.schemas.user import UserCreate
+from app.schemas.auth import RegisterRequest
 
 
 def authenticate_user(db: Session, *, email: str, password: str) -> User | None:
@@ -14,7 +13,7 @@ def authenticate_user(db: Session, *, email: str, password: str) -> User | None:
     return user
 
 
-def create_user(db: Session, user_in: UserCreate) -> User:
+def create_user(db: Session, user_in: RegisterRequest) -> User:
     db_obj = User(
         email=user_in.email,
         hashed_password=get_password_hash(user_in.password),
@@ -26,3 +25,14 @@ def create_user(db: Session, user_in: UserCreate) -> User:
     db.commit()
     db.refresh(db_obj)
     return db_obj
+
+
+# AuthService class - services/__init__.py ke liye
+class AuthService:
+    @staticmethod
+    def authenticate(db: Session, email: str, password: str) -> User | None:
+        return authenticate_user(db, email=email, password=password)
+
+    @staticmethod
+    def register(db: Session, user_in: RegisterRequest) -> User:
+        return create_user(db, user_in)

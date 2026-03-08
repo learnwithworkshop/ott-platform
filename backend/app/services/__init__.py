@@ -6,7 +6,7 @@ from .recommendation_service import RecommendationService
 
 __all__ = [
     "AuthService",
-    "VideoService",
+    "VideoService", 
     "PaymentService",
     "RecommendationService"
 ]

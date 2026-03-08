@@ -28,7 +28,7 @@ if settings.BACKEND_CORS_ORIGINS:
     )
 
 # Include routers
-from .api.v1.api import api_router
+from .api.v1.router import api_router
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
 @app.get("/health")

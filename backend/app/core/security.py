@@ -39,12 +39,14 @@ def validate_password_strength(password: str) -> tuple[bool, str]:
     
     return True, "Password is strong"
 
-
 def get_password_hash(password: str) -> str:
     """Hash password with bcrypt (12 rounds)."""
     is_valid, message = validate_password_strength(password)
     if not is_valid:
         raise ValueError(message)
+    # bcrypt 72 bytes limit - truncate karo
+    password_bytes = password.encode('utf-8')[:72]
+    password = password_bytes.decode('utf-8', errors='ignore')
     return pwd_context.hash(password)
 
 
